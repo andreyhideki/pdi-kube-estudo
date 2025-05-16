@@ -1,0 +1,55 @@
+# Dependências
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ambiente
+.env
+.env.*
+!.env.example
+
+# Build
+dist/
+build/
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# IDEs e editores
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*.bak
+
+# Testes
+coverage/
+.nyc_output/
+
+# Kubernetes
+kubeconfig
+*.kubeconfig
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Arquivos temporários
+tmp/
+temp/
+
+# Arquivos de debug
+.debug/
+
+# Arquivos de cache
+.cache/
+.npm/
+.eslintcache 
