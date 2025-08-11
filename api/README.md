@@ -68,12 +68,16 @@ minikube delete
 # Verificar o status
 minikube status
 
+#Obter IP
+minikube ip
+
 # Configurar o Docker para usar o Minikube
 eval $(minikube docker-env)
 
 # construir a imagem dentro do minikube
 na pasta 'cd api'
 execute o comando 'docker build -t nest-api:latest .'
+    'docker build -t minikubeapi:latest .'
 
 # Aplicar os manifestos do kubernets
 na pasta 'cd ../k8s'
@@ -114,6 +118,10 @@ kubectl get pods
 # Remover um pod específico
 kubectl delete pod <nome-do-pod>
 
+# Escalar replicas
+kubectl scale deployment minha-api --replicas=3
+kubectl get pods
+kubectl logs <nome-do-pod>
 
 http://localhost:30080/health
 
