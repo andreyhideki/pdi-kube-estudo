@@ -68,7 +68,7 @@ minikube delete
 # Verificar o status
 minikube status
 
-#Obter IP
+# Obter IP
 minikube ip
 
 # Configurar o Docker para usar o Minikube
