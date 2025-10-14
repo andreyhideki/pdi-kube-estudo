@@ -13,7 +13,7 @@ export const dataSourceOptions: DataSourceOptions = {
   password: process.env.DB_PASSWORD ?? 'postgres',
   database: process.env.DB_DATABASE ?? 'news_db',
   entities: [News],
-  migrations: ['dist/db/migrations/*.js'],
+  migrations: ['dist/src/db/migrations/*.js'],
   synchronize: process.env.NODE_ENV !== 'production',
 };
 

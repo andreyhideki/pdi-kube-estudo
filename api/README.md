@@ -59,6 +59,12 @@ sudo apt-get install -y kubectl
 # Iniciar o Minikube
 minikube start
 
+# Iniciar o Minikube com Docker
+minikube start --driver=docker
+
+# Iniciar o Minikube ajustando recursos (se necessário)
+minikube start --driver=docker --cpus=2 --memory=4096
+
 # Parar o Minikube
 minikube stop
 
@@ -70,6 +76,9 @@ minikube status
 
 # Obter IP
 minikube ip
+
+# apresentar Dashboard > clicar no link apos terminar geracao do dashboard
+minikube dashboard
 
 # Configurar o Docker para usar o Minikube
 eval $(minikube docker-env)
@@ -128,4 +137,9 @@ http://localhost:30080/health
 ## Show objetos kubernets possiveis
 Lista todos objetos que podem ser criados no k8s
 kubectl api-resources
+
+
+# Reiniciar os pods do deployment (sem alterar o manifesto):
+kubectl rollout restart deployment/postgres
+kubectl rollout status deployment/postgres
 
